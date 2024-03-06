@@ -34,17 +34,27 @@ public class Main {
         scanner.close();
     }
     public static int getDaysInMonth(int month, int year) {
-        if (month < 1 || month > 12) {
-            return -1; // Tháng không hợp lệ
-        }
 
-        int[] daysInMonthArray = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-
-        // Xử lý năm nhuận
-        if (month == 2 && ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))) {
-            return 29; // Năm nhuận, tháng 2 có 29 ngày
-        } else {
-            return daysInMonthArray[month]; // Trả về số ngày trong tháng
+        int a;
+        switch (month) {
+            case 1, 3, 5, 7, 8, 10, 12:
+                a = 31;
+                break;
+            case 4, 6, 9 ,11:
+                a = 30;
+                break;
+            case 2:
+                // Kiểm tra năm nhuận
+                if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                    a = 29;
+                } else {
+                    a = 28;
+                }
+                break;
+            default:
+                a = -1; // Nếu người dùng nhập số tháng không hợp lệ
+                break;
         }
+        return a;
     }
 }
