@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Circle perimeter: " + circle.getPerimeter());
     }
     static class Square {
-        private double side;
+        private final double side;
 
         public Square(double side) {
             this.side = side;
@@ -30,7 +30,7 @@ public class Main {
         }
     }
     static class Circle {
-        private double radius;
+        private final double radius;
 
         public Circle(double radius) {
             this.radius = radius;
