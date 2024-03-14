@@ -1,4 +1,4 @@
-package baitap02;
+package bai01.ex2;
 
 import java.util.Random;
 import java.util.Scanner;

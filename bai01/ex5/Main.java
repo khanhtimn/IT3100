@@ -1,4 +1,4 @@
-package baitap05;
+package bai01.ex5;
 
 import java.util.Scanner;
 /** Bài tập 4: Nhập vào kích thước ô vuông n*n, kiểm tra 3<=n<= 8. Hiển thị ra màn hình kết quả như ví dụ sau.

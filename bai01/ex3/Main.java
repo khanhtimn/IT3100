@@ -1,4 +1,4 @@
-package baitap03;
+package bai01.ex3;
 import java.util.Scanner;
 
 /***
