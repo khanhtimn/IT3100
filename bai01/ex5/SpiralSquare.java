@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 11  16  15  6
  * 10  9   8   7
  */
-public class Main {
+public class SpiralSquare {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

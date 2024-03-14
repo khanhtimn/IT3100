@@ -4,7 +4,7 @@ import java.util.Scanner;
 /***
  * Bài tập 3: Viết chương trình sắp xếp một dãy số theo thứ tự tăng dần, dãy số được nhập từ bàn phím.
  */
-public class Main {
+public class ArraySort {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
