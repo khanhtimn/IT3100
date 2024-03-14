@@ -1,14 +1,15 @@
 package bai02.ex1;
 
 import java.util.Scanner;
-/*
-• Bài 1: Viết khai báo một gói (shape) chứa hai lớp:
-lớp hình vuông, lớp hình tròn. Viết khai báo lớp hình vuông, lớp hình tròn cùng các thuộc tính thích hợp,
-các phương thức get/set thích hợp.
-• Thuộc tính: Kích thước (m)
-• Phương thức: get/set và sayhello
-• Viết chương trình sử dụng 2 lớp này*/
-public class Main {
+/**
+* Bài 1: Viết khai báo một gói (shape) chứa hai lớp:
+* lớp hình vuông, lớp hình tròn. Viết khai báo lớp hình vuông, lớp hình tròn cùng các thuộc tính thích hợp,
+* các phương thức get/set thích hợp.
+* Thuộc tính: Kích thước (m)
+* Phương thức: get/set và sayhello
+* Viết chương trình sử dụng 2 lớp này
+**/
+public class AreaPerimeter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
