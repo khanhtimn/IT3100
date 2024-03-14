@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Viết chương trình nhập chiều cao h từ bàn phím, sau đó hiển thị các tam giác hình sao có chiều cao h.
  * Chú ý có kiểm tra điều kiện của h: 2<=h<=10. Nếu h nằm ngoài đoạn trên, yêu cầu người dùng nhập lại.
  * */
-public class Main {
+public class Triangle {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Để lấy một số int ngẫu nhiên từ 0 đến n-1 ta dùng lệnh:
  * int i = Random.nextInt(n);
  */
-public class Main {
+public class RandomInt {
     public static void main(String[] args) {
         // Nhập số phần tử của mảng từ người dùng
         Scanner scanner = new Scanner(System.in);

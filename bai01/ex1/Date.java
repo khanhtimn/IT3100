@@ -5,7 +5,7 @@ import java.util.Scanner;
 /***
  * Bài tập 01: Viết chương trình nhập vào một tháng và năm, sau đó hiển thị ra màn hình số ngày trong tháng đó.
  */
-public class Main {
+public class Date {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
