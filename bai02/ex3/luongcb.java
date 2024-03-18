@@ -13,6 +13,7 @@ package bai02.ex3;
 import java.util.Scanner;
 
 public class luongcb {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         NhanVien nhanvien = new NhanVien();
@@ -28,9 +29,7 @@ public class luongcb {
         System.out.print("Nhập lương tối đa: ");
         double luongtoida = scanner.nextDouble();
         nhanvien.setLuongtoida(luongtoida);
-        nhanvien.inTTin();
-        double luong;
-        nhanvien.tangLuong(luong);
+        nhanvien.setLuong();
         nhanvien.inTTin();
         scanner.close();
     }
@@ -42,23 +41,31 @@ public class luongcb {
         private double luongtoida;
         private double luongcb;
 
+        public NhanVien() {
+            this.name = "";
+            this.luong = 0;
+            this.hesoluong = 0;
+            this.luongtoida = 0;
+            this.luongcb = 0;
+        }
+
         public void inTTin() {
             System.out.println("Tên nhân viên: " + name);
             System.out.println("Lương cơ bản: " + luongcb);
             System.out.println("Hệ số lương: " + hesoluong);
             System.out.println("Lương tối đa: " + luongtoida);
-            System.out.println("tangLuong: " + tangLuong(luong));
+            System.out.println("Luong: " + luong);
+            System.out.println(tangLuong(luong));
         }
-        public boolean tangLuong(double tien) {
-            if (luongcb * hesoluong + tien > luongtoida) {
+        public boolean tangLuong(double luong) {
+            if (luong > luongtoida) {
                 System.out.println("Lương tăng lên sẽ vượt quá lương tối đa");
                 return false;
             }
-
-            return true;
+                return true;
         }
-        public String getName(String name) {
-            return this.name;
+       public void getName(String name) {
+            this.name = name;
         }
 
         public void setLuongcb(double luongcb) {
@@ -68,13 +75,13 @@ public class luongcb {
         public void setHesoluong(double hesoluong) {
             this.hesoluong = hesoluong;
         }
-        public void getluong() {
-            this.luong = luongcb * hesoluong;
-        }
+
         public void setLuongtoida(double luongtoida) {
             this.luongtoida = luongtoida;
         }
-
+        public void setLuong() {
+            this.luong = luongcb * hesoluong;
+        }
 
     }
 }

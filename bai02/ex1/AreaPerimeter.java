@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
 * Bài 1: Viết khai báo một gói (shape) chứa hai lớp:
 * lớp hình vuông, lớp hình tròn. Viết khai báo lớp hình vuông, lớp hình tròn cùng các thuộc tính thích hợp,
-* các phương thức get/set thích hợp.
+* các phương thức get/set thích hợp.c
 * Thuộc tính: Kích thước (m)
 * Phương thức: get/set và sayhello
 * Viết chương trình sử dụng 2 lớp này
