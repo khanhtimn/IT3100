@@ -56,7 +56,7 @@ public class LuongCanBan {
             System.out.println("Hệ số lương: " + hesoluong);
             System.out.println("Lương tối đa: " + luongtoida);
             System.out.println("Luong: " + luong);
-            //System.out.println(tangLuong(luong));
+            System.out.println(tangLuong(luong));
         }
         public boolean tangLuong(double luong) {
             if (luong > luongtoida) {
