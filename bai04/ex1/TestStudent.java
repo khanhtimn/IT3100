@@ -1,7 +1,7 @@
 package bai04.ex1;
 import java.util.Scanner;
 
-public class Test {
+public class TestStudent {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
