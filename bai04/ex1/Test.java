@@ -2,7 +2,6 @@ package bai04.ex1;
 import java.util.Scanner;
 
 public class Test {
-    private static Student[] students;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -10,7 +9,7 @@ public class Test {
         int numStudents = scanner.nextInt();
         scanner.nextLine();
 
-        students = new Student[numStudents];
+        Student[] students = new Student[numStudents];
 
         for (int i = 0; i < students.length; i++) {
             System.out.print("Nhập tên sinh viên thứ " + (i + 1) + ": ");
