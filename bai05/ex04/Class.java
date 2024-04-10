@@ -3,7 +3,6 @@ package bai05.ex04;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -28,21 +27,16 @@ public class Class {
         }
     }
 
-    public Class() {
-        danhSachSinhVien = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhập số lượng sinh viên: ");
-        int soLuongSinhVien = scanner.nextInt();
-        scanner.nextLine();
-        for (int i = 0; i < soLuongSinhVien; i++) {
-            System.out.print("Nhập tên sinh viên thứ " + (i + 1) + ": ");
-            String ten = scanner.nextLine();
-            System.out.print("Nhập năm sinh sinh viên thứ " + (i + 1) + ": ");
-            int namSinh = scanner.nextInt();
-            scanner.nextLine();
-            int diemNgauNhien = ThreadLocalRandom.current().nextInt(0, 10 + 1);
-            danhSachSinhVien.add(new Student(ten, namSinh, diemNgauNhien));
+    public double tinhDiemTong() {
+        double sum = 0;
+        for (Student sv : danhSachSinhVien) {
+            sum += sv.getDiemThi();
         }
+        return sum;
+    }
+
+    public double tinhDiemTrungBinh() {
+        return tinhDiemTong() / danhSachSinhVien.size();
     }
 
     public void sapXepTheoDiem() {
