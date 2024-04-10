@@ -1,4 +1,4 @@
-package bai05.ex02;
+package bai05.ex03;
 
 public class TestClass {
     public static void main(String[] args) {
