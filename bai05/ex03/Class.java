@@ -18,6 +18,16 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Class {
     private final List<Student> danhSachSinhVien;
 
+    private int soLuongSinhVien = 0;
+
+    public int getSoLuongSinhVien() {
+        return soLuongSinhVien;
+    }
+
+    public void tangSoLuongSinhVien() {
+        soLuongSinhVien++;
+    }
+
     public Class(int soLuongSinhVien) {
         this.danhSachSinhVien = new ArrayList<>();
         for (int i = 0; i < soLuongSinhVien; i++) {
@@ -25,6 +35,7 @@ public class Class {
             int namSinh = ThreadLocalRandom.current().nextInt(1990, 2006);
             int diemNgauNhien = ThreadLocalRandom.current().nextInt(0, 10 + 1);
             danhSachSinhVien.add(new Student(tenNgauNhien, namSinh, diemNgauNhien));
+            tangSoLuongSinhVien();
         }
     }
 
@@ -42,6 +53,7 @@ public class Class {
             scanner.nextLine();
             int diemNgauNhien = ThreadLocalRandom.current().nextInt(0, 10 + 1);
             danhSachSinhVien.add(new Student(ten, namSinh, diemNgauNhien));
+            tangSoLuongSinhVien();
         }
     }
 
