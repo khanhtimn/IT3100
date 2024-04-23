@@ -1,10 +1,8 @@
 package bai05.ex06;
 
-
-
 public class Test {
     public static void main(String[] args) {
-        Tourist tourist = new Tourist("John");
+        Tourist tourist = new Tourist(NameGenerator.generateRandomName());
         Location location = new Location("Hanoi");
         Hotel hotel = new Hotel("Hilton");
         Tour tour = new Tour(tourist, location, hotel);
@@ -16,5 +14,4 @@ public class Test {
         tourManagement.bookTour(tourist, location, hotel);
         System.out.println(tourManagement.getTotalBookedTours());
     }
-
 }
