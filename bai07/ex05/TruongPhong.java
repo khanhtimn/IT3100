@@ -1,6 +1,7 @@
 package bai07.ex05;
 
-public class TruongPhong extends NhanVien implements INhanVien {
+public class TruongPhong extends NhanVien {
+
     private final double phuCap;
     private final double soNamDuongChuc;
     private double heSoLuong;
@@ -15,7 +16,7 @@ public class TruongPhong extends NhanVien implements INhanVien {
     @Override
     public boolean tangLuong(double luongMoi) {
         double luongThucTe = tinhLuong();
-        if (luongThucTe + luongMoi <= LUONG_MAX) {
+        if (luongThucTe + luongMoi <= LUONG_TOI_DA) {
             heSoLuong += luongMoi / LUONG_CO_BAN;
             return true;
         }

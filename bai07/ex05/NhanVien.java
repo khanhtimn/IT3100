@@ -1,6 +1,9 @@
 package bai07.ex05;
 
-public class NhanVien implements INhanVien {
+public class NhanVien {
+
+    public static final double LUONG_CO_BAN = 750.000;
+    public static final double LUONG_TOI_DA = 20_000_000.0;
 
     private final String tenNhanVien;
     private double heSoLuong;
@@ -10,22 +13,19 @@ public class NhanVien implements INhanVien {
         this.heSoLuong = heSoLuong;
     }
 
-    @Override
     public boolean tangLuong(double luongMoi) {
         double luongThucTe = tinhLuong();
-        if (luongThucTe + luongMoi <= LUONG_MAX) {
+        if (luongThucTe + luongMoi <= LUONG_TOI_DA) {
             heSoLuong += luongMoi / LUONG_CO_BAN;
             return true;
         }
         return false;
     }
 
-    @Override
     public double tinhLuong() {
         return heSoLuong * LUONG_CO_BAN;
     }
 
-    @Override
     public void inThongTin() {
         System.out.println("Tên nhân viên: " + tenNhanVien);
         System.out.println("Hệ số lương: " + heSoLuong);
