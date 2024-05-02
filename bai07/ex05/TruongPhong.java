@@ -2,10 +2,9 @@ package bai07.ex05;
 
 public class TruongPhong extends NhanVien {
 
+    private double heSoLuong;
     private final double phuCap;
     private final double soNamDuongChuc;
-    private double heSoLuong;
-
 
     public TruongPhong(String tenNhanVien, double heSoLuong, double phuCap, double soNamDuongChuc) {
         super(tenNhanVien, heSoLuong);
@@ -33,6 +32,5 @@ public class TruongPhong extends NhanVien {
         super.inThongTin();
         System.out.println("Phụ cấp: " + phuCap);
         System.out.println("Số năm đương chức: " + soNamDuongChuc);
-        System.out.println("Lương thực tế: " + tinhLuong());
     }
 }

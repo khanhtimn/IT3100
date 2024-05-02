@@ -27,7 +27,7 @@ public class NhanVien {
     }
 
     public void inThongTin() {
-        System.out.println("Tên nhân viên: " + tenNhanVien);
+        System.out.println("Tên: " + tenNhanVien);
         System.out.println("Hệ số lương: " + heSoLuong);
         System.out.println("Lương thực tế: " + tinhLuong());
     }

@@ -11,7 +11,7 @@ public class Test {
         nhanVien.inThongTin();
 
         // Tăng lương cho nhân viên
-        double luongMoi = new Random().nextInt(10000) * 1000;
+        double luongMoi = new Random().nextDouble(100_000_000);
         System.out.println("Lương mới: " + luongMoi);
         if (nhanVien.tangLuong(luongMoi)) {
             System.out.println("Tăng lương thành công!");
@@ -29,7 +29,7 @@ public class Test {
         truongPhong.inThongTin();
 
         // Tăng lương cho trưởng phòng
-        luongMoi = new Random().nextInt(100000) * 1000;
+        luongMoi = new Random().nextDouble(100_000_000);
         System.out.println("Lương mới: " + luongMoi);
         if (truongPhong.tangLuong(luongMoi)) {
             System.out.println("Tăng lương thành công!");
