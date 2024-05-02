@@ -2,9 +2,9 @@ package bai05.ex06;
 
 public class Test {
     public static void main(String[] args) {
-        Tourist tourist = new Tourist(NameGenerator.generateRandomName());
-        Location location = new Location("Hanoi");
-        Hotel hotel = new Hotel("Hilton");
+        Tourist tourist = new Tourist(InfoGenerator.generateRandomName());
+        Location location = new Location(InfoGenerator.generateRandomLocation());
+        Hotel hotel = new Hotel(InfoGenerator.generateRandomHotel());
         Tour tour = new Tour(tourist, location, hotel);
         tour.book();
         System.out.println(tour.getTourist().getTouristName());
