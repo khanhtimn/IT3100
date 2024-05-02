@@ -1,17 +1,24 @@
 package bai07.ex06;
 
-public class GiamDoc extends CanBoQuanLy implements QuanLy {
+import java.util.Random;
 
-    private final double phuCap;
+interface QuanLy {
 
-    public GiamDoc(String tenNhanVien, double heSoLuong, double phuCap) {
+    double LOI_NHUAN_CONG_TY = new Random().nextDouble(100_000_000);
+    double tinhHoaHong();
+
+}
+
+class CanBoQuanLy extends NhanVien implements QuanLy {
+
+
+    public CanBoQuanLy(String tenNhanVien, double heSoLuong) {
         super(tenNhanVien, heSoLuong);
-        this.phuCap = phuCap;
     }
 
     @Override
     public double tinhLuong() {
-        return LUONG_CO_BAN * heSoLuong + phuCap + tinhHoaHong();
+        return LUONG_CO_BAN * heSoLuong + tinhHoaHong();
     }
 
     @Override
@@ -32,6 +39,9 @@ public class GiamDoc extends CanBoQuanLy implements QuanLy {
     @Override
     public void inThongTin() {
         super.inThongTin();
-        System.out.println("Phụ cấp: " + phuCap);
+        System.out.println("Lợi nhuận công ty: " + LOI_NHUAN_CONG_TY);
+        System.out.println("Hoa hồng: " + tinhHoaHong());
+        System.out.println("Lương thực tế: " + tinhLuong());
     }
 }
+
