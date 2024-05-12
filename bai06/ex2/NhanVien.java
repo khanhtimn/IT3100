@@ -32,4 +32,8 @@ public class NhanVien {
     }
 
 
+    public void inTTin() {
+        System.out.println("TenNhanVien: " + tenNhanVien);
+        System.out.println("HeSoLuong: " + heSoLuong);
+    }
 }

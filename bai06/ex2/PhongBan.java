@@ -31,12 +31,11 @@ public class PhongBan {
         this.soNhanVien = soNhanVien;
 
     }
-    public getTenPhongBan(){
-        return tenPhongBan;
+    public PhongBan(){
+        this("", (byte)0);
     }
-    public getSoNhanVien(){
-        return soNhanVien;
-    }
+
+
     // Việc thêm/xóa nhân viên được thực hiện theo cơ chế của stack
     public boolean themNV(NhanVien nhanVien){
         if(soNhanVien < SO_NV_MAX){
