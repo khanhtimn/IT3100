@@ -19,6 +19,7 @@ import java.util.Random;
  * • Viết chương trình demo viêc sử dung các lớp trên
  * */
 public class Test {
+
     private static final int MAX_SHAPES = 10;
     private static final Random random = new Random();
 
