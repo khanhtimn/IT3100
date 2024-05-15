@@ -58,6 +58,7 @@ public class PhongBan {
         for(int i = 0; i < soNhanVien; i++){
             tongLuong += nhanViens[i].tinhLuong();
         }
+        return tongLuong;
     }
     public void inTTin(){
         System.out.println("TenPhongBan: " + tenPhongBan);

@@ -1,3 +1,4 @@
+
 package bai06.ex2;
 /** NhanVien
  * -tenNhanVien: String
@@ -8,6 +9,7 @@ package bai06.ex2;
  * +tinhLuong () : double
  * +inTTin ()
  **/
+
 public class NhanVien {
     public String tenNhanVien;
     public double heSoLuong;
@@ -22,6 +24,7 @@ public class NhanVien {
         if(luong > LUONG_MAX){
             return LUONG_MAX;
         }
+        return luong;
     }
 
     public boolean tangLuong(double heSoTang){
@@ -35,5 +38,7 @@ public class NhanVien {
     public void inTTin() {
         System.out.println("TenNhanVien: " + tenNhanVien);
         System.out.println("HeSoLuong: " + heSoLuong);
+        System.out.println("Luong: " + tinhLuong());
+
     }
 }
