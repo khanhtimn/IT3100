@@ -1,14 +1,14 @@
 package bai06.ex3;
 
-import java.awt.Color;
+
 import java.util.List;
 import java.util.ArrayList;
 
-public class polygon {
-    private List<Point> points;
-    private Bundle bundle;
+public class Polygon {
+    private final List<Point> points;
+    private final Bundle bundle;
 
-   public polygon(Bundle bundle){
+   public Polygon(Bundle bundle){
        this.bundle = bundle;
        this.points = new ArrayList<>();
    }
@@ -18,12 +18,12 @@ public class polygon {
 
     public void rotate(double angle){
         for (Point point : points) {
-            points.rotate(angle);
+            point.rotate(angle);
         }
     }
     public void scale(double factor){
         for (Point point : points){
-            points.scale(factor);
+            point.scale(factor);
         }
     }
 

@@ -12,14 +12,17 @@ public class Student {
     }
 
     public String getStudentName() {
+
         return studentName;
     }
 
     public int getYear() {
+
         return year;
     }
 
     public int getDiemThi() {
+
         return diemThi;
     }
 }

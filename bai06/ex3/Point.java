@@ -1,6 +1,7 @@
 package bai06.ex3;
 
 
+
 public class Point {
     private double x;
     private double y;
@@ -9,12 +10,7 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-    public double getX(){
-        return x;
-    }
-    public double getY(){
-        return y;
-    }
+
     public void rotate(double angle){
         double radians = Math.toRadians(angle);
         double xNew = x * Math.cos(radians) - y * Math.sin(radians);

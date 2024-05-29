@@ -4,16 +4,22 @@ import java.awt.*;
 
 public class Triagle {
     public static void main(String[] args) {
-        // Create a GraphicsBundle with a color
-        Bundle graphicsBundle = new Bundle(Color.RED);
+        // Tạo ra một Bundle với màu xanh
+        Bundle graphicsBundle = new Bundle(Color.BLUE);
 
-        // Create a Polygon with the GraphicsBundle
+
+        // Tao ra mot Polygon voi Bundle graphicsBundle
         Polygon polygon = new Polygon(graphicsBundle);
 
-        // Add points to the Polygon
-        polygon.addPoint(new Point(1, 1));
-        polygon.addPoint(new Point(2, 3));
-        polygon.addPoint(new Point(4, 5));
+        //Them cac diem cua Polygon
+       polygon.addPoint(new Point(0, 0));
+
+       polygon.addPoint(new Point(1, 0));
+
+       polygon.addPoint(new Point(0, 1));
+
+
+
 
         // Print the initial state of the Polygon
         System.out.println("Initial Polygon: " + polygon);

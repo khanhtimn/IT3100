@@ -16,9 +16,11 @@
 package bai06.ex2;
 
 
-//import java.util.Stack;
-//import java.util.List;
-//import java.util.ArrayList;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
+
 
 public class PhongBan {
     public String tenPhongBan;
@@ -31,8 +33,15 @@ public class PhongBan {
         this.soNhanVien = soNhanVien;
 
     }
-    public PhongBan(){
-        this("", (byte)0);
+    private final List<NhanVien> danhsachNhanVien;
+    public PhongBan(int soNhanVien){
+        this.danhsanhNhanVien = new ArrayList<>();
+        for(int i = 0; i < soNhanVien; i++){
+            String tenNgauNhien = NameGenerator.generateRandomName();
+            double heSoLuong = ThreadLocalRandom.current().nextDouble(1, 10);
+            danhsachNhanVien.add(new NhanVien(tenNgauNhien, heSoLuong));
+        }
+
     }
 
 
