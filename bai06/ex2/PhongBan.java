@@ -27,15 +27,17 @@ public class PhongBan {
     public byte soNhanVien;
     public static final byte SO_NV_MAX = 100;
     public NhanVien[] nhanViens = new NhanVien[SO_NV_MAX];
+    private final List<NhanVien> danhsachNhanVien;
 
     public PhongBan(String tenPhongBan, byte soNhanVien){
         this.tenPhongBan = tenPhongBan;
         this.soNhanVien = soNhanVien;
+        this.danhsachNhanVien = new ArrayList<>();
 
     }
-    private final List<NhanVien> danhsachNhanVien;
+
     public PhongBan(int soNhanVien){
-        this.danhsanhNhanVien = new ArrayList<>();
+        this.danhsachNhanVien = new ArrayList<>();
         for(int i = 0; i < soNhanVien; i++){
             String tenNgauNhien = NameGenerator.generateRandomName();
             double heSoLuong = ThreadLocalRandom.current().nextDouble(1, 10);
